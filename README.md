@@ -26,8 +26,8 @@ Images can be saved within a React component and imported to a component.
 Branch name: `setup-off-on`
 <!-- - User story: I can navigate to localhost:3000 in the browser and see a React application. -->
 <!-- - User story: The app has a header and a square on the screen with the word "off" in the middle. -->
-- User story: When I click the square the word toggles from "off" to "on" and then back to "off" again.
-- User story: When the lightbulb is "off" the background color of the box is white. When the lightbulb is "on" the background color of the box is yellow.
+<!-- - User story: When I click the square the word toggles from "off" to "on" and then back to "off" again. -->
+<!-- - User story: When the lightbulb is "off" the background color of the box is white. When the lightbulb is "on" the background color of the box is yellow. -->
 
 **Part 2**  
 Branch name: `assets-switch`

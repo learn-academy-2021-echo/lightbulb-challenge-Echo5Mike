@@ -5,26 +5,22 @@ class App extends Component{
   constructor(props){
     super(props)
     this.state={
-      lightIs: "OFF"
+      lightIs: "OFF",
+      color: "Cornsilk"
     }  
   }
 
   offOn = () => {
-    if (this.state.lightIs === "OFF"){
-      this.setState({lightIs: "ON"})
-    } else if (this.state.lightIs === "ON"){
-      this.setState({lightIs: "OFF"})
-    }
+    (this.state.lightIs === "OFF") ? this.setState({lightIs: "ON", color: 'yellow'}) : this.setState({lightIs: "OFF", color: 'white'})
   }
-  
-
 
 
 
   render(){
     return(
       <>
-        <button onClick={this.offOn} style={{backgroundColor: 'yellow'}} id="square" >
+        <h1 id= "title" >Lightbulb Challenge</h1>
+        <button onClick={this.offOn} style={{backgroundColor: this.state.color}} id="square" >
           {this.state.lightIs}
         </button>
 
