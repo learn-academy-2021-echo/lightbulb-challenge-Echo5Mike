@@ -1,28 +1,28 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Toggle from './components/Toggle';
+import offToggle from './images/offToggle.jpeg';//
+import onToggle from './images/onToggle.jpeg';
 import './App.css'
-
+//I struggled importing these toggle switches.  I couldn't figure out the correct way of brining them in.  I was
 class App extends Component{
   constructor(props){
     super(props)
     this.state={
-      lightIs: "OFF",
-      color: "Cornsilk"
+      position: offToggle,
     }  
   }
-
-  offOn = () => {
-    (this.state.lightIs === "OFF") ? this.setState({lightIs: "ON", color: 'yellow'}) : this.setState({lightIs: "OFF", color: 'white'})
+// I felt that a ternary operator would be ideal for the toggle
+  flip = () => {
+    (this.state.position === offToggle) ? this.setState({position: onToggle}) : this.setState({position: offToggle})
   }
-
 
 
   render(){
     return(
       <>
-        <h1 id= "title" >Lightbulb Challenge</h1>
-        <button onClick={this.offOn} style={{backgroundColor: this.state.color}} id="square" >
-          {this.state.lightIs}
-        </button>
+        <Toggle />
+        <img onClick={this.flip} src={this.state.position} alt="somthing"/>
+
 
       </>
     )
