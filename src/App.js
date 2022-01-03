@@ -1,31 +1,41 @@
 import React, { Component } from 'react';
 import Toggle from './components/Toggle';
-import Bulb from './components/Bulb';
-// import offToggle from './images/offToggle.jpeg';//
-// import onToggle from './images/onToggle.jpeg';
+
+
 import './App.css'
 //I struggled importing these toggle switches.  I couldn't figure out the correct way of brining them in.  I was
 class App extends Component{
   constructor(props){
     super(props)
     this.state={
-      key: "value"
+      onScreen: 0,
+      onScreenArray:[]
     }  
   }
-// I felt that a ternary operator would be ideal for the toggle
-  // flip = () => {
-  //   (this.state.position === offToggle) ? this.setState({position: onToggle}) : this.setState({position: offToggle})
-  // }
+
+  addToScreen=()=>{
+    this.setState({OnScreen: this.state.onScreen + 1})
+    this.state.onScreenArray.push(this.state.onScreen)
+  }
+  removeFromScreen=()=>{
+    this.setState({OnScreen: this.state.onScreen - 1})
+    this.state.onScreenArray.pop(this.state.onScreen)
+  }
+
+
 
 
   render(){
     return(
       <>
-      
-        <Toggle />
-        {/* <img onClick={this.flip} src={this.state.position} alt="somthing"/> */}
+        <h1 id= "title" >Lightbulb Challenge</h1>
+        <button id="add" onClick={this.addToScreen}>Add</button> 
+        <button id= "dda"onClick={this.removeFromScreen}>ddA</button>
 
+        <h1>{this.state.onScreenArray.map(value=><h1><Toggle /></h1>)}</h1>
+        
 
+        <h6 id= "whom" >By: Raul M.</h6>
       </>
     )
   }
