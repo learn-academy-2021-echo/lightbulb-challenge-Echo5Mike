@@ -1,8 +1,8 @@
 import React,{Component} from "react";
-import offToggle from "/Users/learnacademy/Desktop/Echo/lightbulb-challenge-Echo5Mike/src/images/offToggle.jpeg";
-import onToggle from "/Users/learnacademy/Desktop/Echo/lightbulb-challenge-Echo5Mike/src/images/onToggle.jpeg";
-import bulbOn from "/Users/learnacademy/Desktop/Echo/lightbulb-challenge-Echo5Mike/src/images/lightOff.jpeg"
-import bulbOff from "/Users/learnacademy/Desktop/Echo/lightbulb-challenge-Echo5Mike/src/images/lightOn.jpeg";
+import offToggle from "../images/offToggle.jpeg";
+import onToggle from "../images/onToggle.jpeg";
+import bulbOff from "../images/lightOff.jpeg";
+import bulbOn from "../images/lightOn.jpeg";
 
 
 

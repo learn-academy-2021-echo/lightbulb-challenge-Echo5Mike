@@ -1,44 +1,21 @@
 import React, { Component } from 'react';
-import Toggle from './components/Toggle';
-
-
+import Buttons from './components/Buttons';
 import './App.css'
-//I struggled importing these toggle switches.  I couldn't figure out the correct way of brining them in.  I was
+
 class App extends Component{
   constructor(props){
     super(props)
     this.state={
-      onScreen: 0,
-      onScreenArray:[]
+      key: "value"
     }  
   }
-
-  addToScreen=()=>{
-    this.setState({OnScreen: this.state.onScreen + 1})
-    this.state.onScreenArray.push(this.state.onScreen)
-  }
-  removeFromScreen=()=>{
-    this.setState({OnScreen: this.state.onScreen - 1})
-    this.state.onScreenArray.pop(this.state.onScreen)
-  }
-
-
-
 
   render(){
     return(
       <>
-        <h1 id= "title" >Lightbulb Challenge</h1>
-        <button id="add" onClick={this.addToScreen}>Add</button> 
-        <button id= "dda"onClick={this.removeFromScreen}>ddA</button>
-
-        <h1>{this.state.onScreenArray.map(value=><h1><Toggle /></h1>)}</h1>
-        
-
-        <h6 id= "whom" >By: Raul M.</h6>
+        <Buttons />
       </>
     )
   }
 }
 export default App
-
