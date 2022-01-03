@@ -1,8 +1,8 @@
 import React,{Component} from "react";
-import offToggle from '/Users/learnacademy/Desktop/Echo/lightbulb-challenge-Echo5Mike/src/images/offToggle.jpeg';
-import onToggle from '/Users/learnacademy/Desktop/Echo/lightbulb-challenge-Echo5Mike/src/images/onToggle.jpeg';
-import bulbOn from "/Users/learnacademy/Desktop/Echo/lightbulb-challenge-Echo5Mike/src/images/lightOn.jpeg"
-import bulbOff from "/Users/learnacademy/Desktop/Echo/lightbulb-challenge-Echo5Mike/src/images/lightOff.jpeg";
+import offToggle from "../images/offToggle.jpeg";
+import onToggle from "../images/onToggle.jpeg";
+import bulbOff from "../images/lightOff.jpeg";
+import bulbOn from "../images/lightOn.jpeg";
 
 
 
@@ -17,25 +17,14 @@ class Toggle extends Component{
   flip = () => {
     (this.state.position === offToggle) ? this.setState({position: onToggle, bulbIs: bulbOn}) : this.setState({position: offToggle, bulbIs: bulbOff})
   }
-
-  // offOn = () => {
-  //   (this.state.bulbIs === bulbOff) ? this.setState({bulbIs: bulbOn}) : this.setState({bulbIs: bulbOff})
-  // }
   
-
   render(){
     return(
       <>
-        <img src={this.state.bulbIs} alt="a light bulb"/>
-        <brk/>
-        <img onClick={this.flip} src={this.state.position} alt="a off/on toggle switch"/>
+        <img id="bulb" src={this.state.bulbIs} alt="a light bulb"/>
+        
+        <img id="toggle" onClick={this.flip} src={this.state.position} alt="a off/on toggle switch"/>
 
-
-
-        {/* <h1 id= "title" >Lightbulb Challenge</h1>
-        <button onClick={this.offOn} style={{backgroundColor: this.state.color}} id="square" >
-          {this.state.lightIs}
-        </button> */}
 
       </>
     )
